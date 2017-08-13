@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.testhive</groupId>
+    <artifactId>testhive</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <!-- encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- maven -->
+        <maven.encoding>UTF-8</maven.encoding>
+        <maven.jdk>1.6</maven.jdk>
+        <maven.compiler>3.0</maven.compiler>
+        <maven.surefire>2.12</maven.surefire>
+        <maven-jar-plugin>2.3.1</maven-jar-plugin>
+        <maven.dependency>2.8</maven.dependency>
+        <!-- junit -->
+        <junit.version>4.11</junit.version>
+        <mockito-all.version>1.9.5</mockito-all.version>
+        <hamcrest.version>1.3</hamcrest.version>
+        <!-- log -->
+        <slf4j.varsion>1.7.9</slf4j.varsion>
+        <log4j.version>1.2.17</log4j.version>
+        <!-- other -->
+        <commons-lang3.version>3.3.2</commons-lang3.version>
+        <hadoop.version>2.6.0-cdh5.4.3</hadoop.version>
+        <hive-jdbc.version>1.1.0-cdh5.4.3</hive-jdbc.version>
+        <jdo2-api.version>2.3-eb</jdo2-api.version>
+        <sqlline.version>1.1.9</sqlline.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <oracle.version>11.2.0.1.0</oracle.version>
+        <ap-commons.version>1.1</ap-commons.version>
+        <bcprov-jdk14.version>1.43</bcprov-jdk14.version>
+    </properties>
+
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <!-- hive-jdbc -->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <version>${hive-jdbc.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>localNexus</id>
+            <url>http://10.1.198.53:3030/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+    </repositories>
+
+
+</project>
